@@ -1,0 +1,14 @@
+{
+    "name": {
+        "ar": "tw-mazeej-bundle",
+        "en": "tw-mazeej-bundle"
+    },
+    "description": {
+        "ar": "",
+        "en": ""
+    },
+    "author_email": "moh.tarek.dev@gmail.com",
+    "support_url": "",
+    "repository": "https://github.com/MohamedTarek1993/tw-mazeej-bundle",
+    "components": []
+}
