@@ -40,7 +40,7 @@ export default class ScrollTop extends LitElement {
       background: #3700b3;
     }
 
-    button[hidden] {
+    button.hidden {
       opacity: 0;
       pointer-events: none;
       transform: translateY(10px);
@@ -67,12 +67,13 @@ export default class ScrollTop extends LitElement {
   }
 
   render() {
+    const label = this.config?.label || 'Scroll to top';
     return html`
       <button
-        ?hidden=${!this.visible}
+        class=${this.visible ? '' : 'hidden'}
         @click=${this._scrollToTop}
-        aria-label=${this.config?.label ?? 'Scroll to top'}
-        title=${this.config?.label ?? 'Scroll to top'}
+        aria-label=${label}
+        title=${label}
       >
         ↑
       </button>

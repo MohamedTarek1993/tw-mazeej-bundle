@@ -12,21 +12,33 @@
     "repository": "https://github.com/MohamedTarek1993/tw-mazeej-bundle",
     "components": [
         {
-            "name": {
-                "ar": "زر العودة للأعلى",
-                "en": "Scroll To Top"
-            },
-            "description": {
-                "ar": "زر يظهر عند التمرير لأسفل الصفحة للعودة للأعلى بسلاسة",
-                "en": "A button that appears when scrolling down and smoothly returns to the top of the page"
-            },
-            "tag": "scroll-top",
-            "props": {
-                "config": {
-                    "label": "العودة للأعلى",
-                    "threshold": 300
+            "title": "Scroll Top",
+            "icon": "sicon-arrow-up",
+            "name": "scroll-top",
+            "key": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+            "fields": [
+                {
+                    "id": "label",
+                    "icon": "sicon-format-text-alt",
+                    "type": "string",
+                    "label": "Button Label",
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "Scroll to top",
+                    "value": "العودة للأعلى"
+                },
+                {
+                    "id": "threshold",
+                    "icon": "sicon-arrow-down",
+                    "type": "number",
+                    "label": "Scroll Threshold (px)",
+                    "format": "number",
+                    "required": false,
+                    "placeholder": "300",
+                    "value": 300
                 }
-            }
+            ]
         }
     ]
 }
