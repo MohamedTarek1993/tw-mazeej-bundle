@@ -39,6 +39,383 @@
                     "value": 300
                 }
             ]
+        },
+        {
+            "title": "Slider Banners Interactive",
+            "icon": "sicon-image-gallery",
+            "name": "slider-banners-interactive",
+            "key": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+            "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+            "fields": [
+
+                {
+                    "id": "slides",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "الشرائح",
+                    "icon": "sicon-image-gallery",
+                    "item_label": "شريحة",
+                    "fields": [
+                        {
+                            "id": "slides.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة الخلفية",
+                            "icon": "sicon-image",
+                            "required": false,
+                            "value": ""
+                        },
+                        {
+                            "id": "slides.sub_title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان الفرعي",
+                            "icon": "sicon-format-text-alt",
+                            "required": false,
+                            "placeholder": "عنوان صغير فوق العنوان الرئيسي",
+                            "value": ""
+                        },
+                        {
+                            "id": "slides.title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان الرئيسي",
+                            "icon": "sicon-format-text-alt",
+                            "required": false,
+                            "placeholder": "العنوان الكبير للشريحة",
+                            "value": ""
+                        },
+                        {
+                            "id": "slides.text",
+                            "type": "string",
+                            "format": "textarea",
+                            "label": "النص التوضيحي",
+                            "icon": "sicon-paragraph",
+                            "required": false,
+                            "placeholder": "وصف قصير للشريحة",
+                            "value": ""
+                        },
+                        {
+                            "id": "slides.show_btn",
+                            "type": "boolean",
+                            "format": "switch",
+                            "label": "إظهار زر الإجراء",
+                            "icon": "sicon-cursor",
+                            "value": false
+                        },
+                        {
+                            "id": "slides.name_btn",
+                            "type": "string",
+                            "format": "text",
+                            "label": "نص الزر",
+                            "icon": "sicon-cursor",
+                            "required": false,
+                            "placeholder": "اكتشف الآن",
+                            "value": ""
+                        },
+                        {
+                            "id": "slides.link_btn",
+                            "type": "string",
+                            "format": "url",
+                            "label": "رابط الزر",
+                            "icon": "sicon-link",
+                            "required": false,
+                            "placeholder": "https://",
+                            "value": ""
+                        }
+                    ]
+                },
+
+                {
+                    "type": "static",
+                    "format": "line",
+                    "icon": "sicon-minus"
+                },
+
+                {
+                    "id": "height",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "ارتفاع السلايدر",
+                    "icon": "sicon-resize-vertical",
+                    "selected": [{ "label": "شاشة كاملة (100vh)", "value": "100vh", "key": "h1" }],
+                    "options": [
+                        { "label": "شاشة كاملة (100vh)", "value": "100vh", "key": "h1" },
+                        { "label": "90% من الشاشة",       "value": "90vh",  "key": "h2" },
+                        { "label": "80% من الشاشة",       "value": "80vh",  "key": "h3" },
+                        { "label": "70% من الشاشة",       "value": "70vh",  "key": "h4" },
+                        { "label": "60% من الشاشة",       "value": "60vh",  "key": "h5" },
+                        { "label": "600 بكسل ثابت",       "value": "600px", "key": "h6" },
+                        { "label": "500 بكسل ثابت",       "value": "500px", "key": "h7" }
+                    ]
+                },
+
+                {
+                    "id": "content_position",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "موضع المحتوى",
+                    "icon": "sicon-layout-grid",
+                    "selected": [{ "label": "يمين", "value": "end", "key": "p1" }],
+                    "options": [
+                        { "label": "يمين",  "value": "end",    "key": "p1" },
+                        { "label": "وسط",   "value": "center", "key": "p2" },
+                        { "label": "يسار",  "value": "start",  "key": "p3" }
+                    ]
+                },
+
+                {
+                    "id": "auto_slide",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "تشغيل تلقائي",
+                    "icon": "sicon-play",
+                    "value": true
+                },
+
+                {
+                    "id": "slide_duration",
+                    "type": "number",
+                    "format": "integer",
+                    "label": "مدة كل شريحة (ثانية)",
+                    "icon": "sicon-time",
+                    "required": false,
+                    "value": 6,
+                    "minLength": 2,
+                    "maxLength": 30
+                },
+
+                {
+                    "type": "static",
+                    "format": "line",
+                    "icon": "sicon-minus"
+                },
+
+                {
+                    "id": "show_arrows",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إظهار أسهم التنقل",
+                    "icon": "sicon-arrow-left",
+                    "value": true
+                },
+
+                {
+                    "id": "show_dots",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إظهار النقاط (Bullets)",
+                    "icon": "sicon-more-horizontal",
+                    "value": true
+                },
+
+                {
+                    "id": "show_progress",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إظهار شريط التقدم",
+                    "icon": "sicon-stats-growth",
+                    "value": true
+                },
+
+                {
+                    "type": "static",
+                    "format": "line",
+                    "icon": "sicon-minus"
+                },
+
+                {
+                    "id": "overlay_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون طبقة التعتيم",
+                    "icon": "sicon-color-lens",
+                    "value": "#0b192c"
+                },
+
+                {
+                    "id": "overlay_opacity",
+                    "type": "number",
+                    "format": "integer",
+                    "label": "شدة التعتيم (0-100)",
+                    "icon": "sicon-eye",
+                    "value": 55,
+                    "minLength": 0,
+                    "maxLength": 100
+                },
+
+                {
+                    "type": "static",
+                    "format": "line",
+                    "icon": "sicon-minus"
+                },
+
+                {
+                    "id": "subtitle_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون العنوان الفرعي",
+                    "icon": "sicon-color-lens",
+                    "value": "#c8a96e"
+                },
+
+                {
+                    "id": "subtitle_size",
+                    "type": "number",
+                    "format": "integer",
+                    "label": "حجم العنوان الفرعي (px)",
+                    "icon": "sicon-text-size",
+                    "value": 18,
+                    "minLength": 10,
+                    "maxLength": 36
+                },
+
+                {
+                    "id": "title_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون العنوان الرئيسي",
+                    "icon": "sicon-color-lens",
+                    "value": "#ffffff"
+                },
+
+                {
+                    "id": "title_size",
+                    "type": "number",
+                    "format": "integer",
+                    "label": "حجم العنوان الرئيسي — ديسكتوب (px)",
+                    "icon": "sicon-text-size",
+                    "value": 56,
+                    "minLength": 20,
+                    "maxLength": 100
+                },
+
+                {
+                    "id": "title_size_mobile",
+                    "type": "number",
+                    "format": "integer",
+                    "label": "حجم العنوان الرئيسي — موبايل (px)",
+                    "icon": "sicon-smartphone",
+                    "value": 32,
+                    "minLength": 14,
+                    "maxLength": 60
+                },
+
+                {
+                    "id": "desc_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون النص التوضيحي",
+                    "icon": "sicon-color-lens",
+                    "value": "#ffffffd9"
+                },
+
+                {
+                    "id": "desc_size",
+                    "type": "number",
+                    "format": "integer",
+                    "label": "حجم النص التوضيحي (px)",
+                    "icon": "sicon-text-size",
+                    "value": 18,
+                    "minLength": 12,
+                    "maxLength": 30
+                },
+
+                {
+                    "type": "static",
+                    "format": "line",
+                    "icon": "sicon-minus"
+                },
+
+                {
+                    "id": "btn_bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون خلفية الزر",
+                    "icon": "sicon-color-lens",
+                    "value": "#c8a96e"
+                },
+
+                {
+                    "id": "btn_text_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون نص الزر",
+                    "icon": "sicon-color-lens",
+                    "value": "#ffffff"
+                },
+
+                {
+                    "id": "btn_border_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون حدود الزر",
+                    "icon": "sicon-color-lens",
+                    "value": "#c8a96e"
+                },
+
+                {
+                    "id": "btn_border_radius",
+                    "type": "number",
+                    "format": "integer",
+                    "label": "انحناء زوايا الزر (px)",
+                    "icon": "sicon-square-corner-round",
+                    "value": 4,
+                    "minLength": 0,
+                    "maxLength": 50
+                },
+
+                {
+                    "type": "static",
+                    "format": "line",
+                    "icon": "sicon-minus"
+                },
+
+                {
+                    "id": "arrows_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون أيقونة الأسهم",
+                    "icon": "sicon-color-lens",
+                    "value": "#ffffff"
+                },
+
+                {
+                    "id": "arrows_bg",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون خلفية الأسهم",
+                    "icon": "sicon-color-lens",
+                    "value": "#ffffff1a"
+                },
+
+                {
+                    "id": "dots_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون النقاط غير النشطة",
+                    "icon": "sicon-color-lens",
+                    "value": "#ffffff66"
+                },
+
+                {
+                    "id": "dots_active_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون النقطة النشطة",
+                    "icon": "sicon-color-lens",
+                    "value": "#c8a96e"
+                },
+
+                {
+                    "id": "progress_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون شريط التقدم",
+                    "icon": "sicon-color-lens",
+                    "value": "#c8a96e"
+                }
+            ]
         }
     ]
 }
