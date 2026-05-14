@@ -6,7 +6,9 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "tw-create-component": "tw-create-component",
+        "tw-delete-component": "tw-delete-component"
     },
     "devDependencies": {
         "@salla.sa/twilight-bundles": "^0.1.0",
